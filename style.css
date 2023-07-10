@@ -1,5 +1,7 @@
 *{
     box-sizing: border-box;
+    text-align: center;
+    margin: 0 auto;
 }
 body{
     background: #f1f1f1;
@@ -10,6 +12,7 @@ body{
     flex-wrap: wrap;
     font-weight: bold;
     width: 250px;
+    padding: 0;
 }
 
 .tabuleiro .posicao{
@@ -34,10 +37,15 @@ body{
     border-radius: 5px;
     background: #f1f1f1;
     transition: 500ms;
+    margin: 20px auto;
 }
 
 .btn:hover{
     border: 2px solid blue;
     color: blue;
     background: white;
+}
+
+#count{
+    font-weight: bold;
 }

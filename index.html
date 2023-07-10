@@ -10,20 +10,15 @@
     <body>
         <h1>Batalha Naval</h1>
 
-        <button id="btnStart" class="btn" onclick="allocateShips()">Iniciar o jogo</button>
+        <button id="btnStart" class="btn" onclick="startGame()">Iniciar o jogo</button>
 
-        <div id="player">
-            <h3>Board do Player</h3>
-            <ul class="tabuleiro">
-            
-            </ul>
-        </div>
         
-        <div id="cpu">
-            <h3>Board do CPU</h3>
+        <div id="board">
+            <h3>SeaBoard</h3>
             <ul class="tabuleiro">
             
             </ul>
+            <p>Rodadas: <span id="count">0</span></p>
         </div>
 
         
