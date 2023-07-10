@@ -2,6 +2,7 @@
 let guesses = []; //Array utilizado para armazenamento dos movimentos
 let shipPositions = []; //Array que armazena as posições dos navios inimigos
 let jogadas = 0; //Contagem de jogadas
+let acertos = 0;
 
 const board = document.querySelector('#board .tabuleiro'); //Referência do tabuleiro
 
@@ -54,11 +55,13 @@ function eventClick_explode(e){
     li.innerText = 'X'
     if(verifyOccurence(shipPositions, x,y)){
         li.style.background = 'green';
+        acertos++;
     }else{
         li.style.background = 'red';
     }
     guesses.push([x,y]);
     updateCount();
+    updateChance()
     checkWinCondition();
 }
 
@@ -104,3 +107,12 @@ function updateCount(){
     jogadas++;
     document.querySelector('#count').innerHTML = jogadas;
 }
+
+// Função utilizada para atualizar o contador de rodadas;
+function updateChance(){
+    const jogadasRestantes = 25 - jogadas;
+    const pontosRestantes = 5 - acertos;
+    const acc = pontosRestantes / jogadasRestantes;
+    document.querySelector('#acc').innerHTML = acc.toFixed(2);
+}
+
