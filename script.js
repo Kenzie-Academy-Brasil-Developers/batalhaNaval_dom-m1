@@ -113,6 +113,6 @@ function updateChance(){
     const jogadasRestantes = 25 - jogadas;
     const pontosRestantes = 5 - acertos;
     const acc = pontosRestantes / jogadasRestantes;
-    document.querySelector('#acc').innerHTML = acc.toFixed(2);
+    document.querySelector('#acc').innerHTML = (acc*100).toFixed(2)+"%";
 }
 
